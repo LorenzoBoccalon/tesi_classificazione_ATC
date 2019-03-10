@@ -1,0 +1,10 @@
+----------------------------------------
+|       PERFORMANCE di riferimento     |
+----------------------------------------
+salvata come rete1
+
+Absolute_false = 0.0286
+Absolute_true = 0.6680
+Accuracy = 0.7073
+Aiming = 0.8816
+Coverage = 0.6215

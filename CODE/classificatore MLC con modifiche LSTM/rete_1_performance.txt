@@ -1,0 +1,10 @@
+----------------------------------------
+|           PERFORMANCE mod. 1         |
+----------------------------------------
+salvata come rete1
+
+Absolute_false = 0.0265
+Absolute_true = 0.6590
+Accuracy = 0.7038
+Aiming = 0.8488
+Coverage = 0.6193

@@ -1,0 +1,67 @@
+Performance values di classificazione utilizzando LSTM con le varie soglie testate
+
+--------------------------------
+soglia=0.10;
+
+Absolute_false = 0.0352
+Absolute_true = 0.5970
+Accuracy = 0.7226
+Aiming = 0.6440
+Coverage = 0.8021
+--------------------------------
+soglia=0.15;
+
+Absolute_false = 0.0282
+Absolute_true = 0.6165
+Accuracy = 0.7264
+Aiming = 0.6873
+Coverage = 0.7571
+--------------------------------
+soglia=0.20;
+
+Absolute_false = 0.0249
+Absolute_true = 0.6310
+Accuracy = 0.7240
+Aiming = 0.7199
+Coverage = 0.7144
+--------------------------------
+soglia=0.25;
+
+Absolute_false = 0.0225
+Absolute_true = 0.6552
+Accuracy = 0.7130
+Aiming = 0.7886
+Coverage = 0.6386
+--------------------------------
+soglia=0.30;
+
+Absolute_false = 0.0223
+Absolute_true = 0.6500
+Accuracy = 0.7188
+Aiming = 0.77673
+Coverage = 0.6625
+--------------------------------
+soglia=0.35;
+
+Absolute_false = 0.0225
+Absolute_true = 0.6552
+Accuracy = 0.7130
+Aiming = 0.7886
+Coverage = 0.6386
+--------------------------------
+soglia=0.40;
+
+Absolute_false = 0.0233
+Absolute_true = 0.6546
+Accuracy = 0.7038
+Aiming = 0.8037
+Coverage = 0.6169
+--------------------------------
+soglia=0.45;
+
+Absolute_false = 0.0248
+Absolute_true = 0.6498
+Accuracy = 0.6938
+Aiming = 0.8192
+Coverage = 0.5977
+--------------------------------

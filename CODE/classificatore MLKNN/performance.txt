@@ -1,0 +1,7 @@
+Performance values di classificatoreMLKNN.m con k = 11
+
+Absolute false    = 0.0247
+Absolute falstrue = 0.6570
+Accuracy          = 0.7131
+Aiming            = 0.8119
+Coverage          = 0.7003

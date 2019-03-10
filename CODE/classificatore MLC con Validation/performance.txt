@@ -1,0 +1,10 @@
+%perfomance con validation set
+
+Absolute_false = 0.0284
+Absolute_true  = 0.6366
+Accuracy       = 0.6837
+Aiming         = 0.8553
+Coverage       = 0.6040
+Val. accuracy  = 0.5962
+
+overfit sul validation

@@ -1,0 +1,395 @@
+%in questo file sono annotate tutte le modifiche a ParametriLSTM 
+%e i relativi performance values
+----------------------------------------
+numHiddenUnits = 50; maxEpochs = 10;
+
+Absolute_false = 0.0330
+Coverage = 0.5825
+Absolute_true = 0.6119
+Aiming = 0.8836
+Accuracy = 0.6578
+----------------------------------------
+numHiddenUnits = 500; maxEpochs = 10;
+
+Absolute_false = 0.0309
+Coverage = 0.6042
+Absolute_true = 0.6518
+Aiming = 0.8884
+Accuracy = 0.6889
+----------------------------------------
+numHiddenUnits = 100; maxEpochs = 10;
+lstmLayer(numHiddenUnits,'OutputMode','sequence')
+
+Absolute_false = 0.0400
+Coverage = 0.4652
+Absolute_true = 0.4777
+Aiming = 0.8071
+Accuracy = 0.5197
+----------------------------------------
+numHiddenUnits = 100; maxEpochs = 10;
+
+Absolute_false = 0.0319
+Coverage = 0.5953
+Absolute_true = 0.6346
+Aiming = 0.8863
+Accuracy = 0.6746
+----------------------------------------
+numHiddenUnits1 = 125; maxEpochs = 10;
+numHiddenUnits2 = 100;
+lstmLayer(numHiddenUnits1,'OutputMode','sequence')
+lstmLayer(numHiddenUnits2,'OutputMode','last')
+
+Absolute_false = 0.0417
+Coverage = 0.4408
+Absolute_true = 0.4515
+Aiming = 0.7919
+Accuracy = 0.4913
+----------------------------------------
+numHiddenUnits1 = 125; maxEpochs = 10;
+numHiddenUnits2 = 100;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+
+Absolute_false = 0.0316
+Coverage = 0.5631
+Absolute_true = 0.5800
+Aiming = 0.8354
+Accuracy = 0.6304
+----------------------------------------
+numHiddenUnits1 = 250; maxEpochs = 10;
+numHiddenUnits2 = 250;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+
+Absolute_false = 0.0307
+Coverage = 0.5890
+Absolute_true = 0.6248
+Aiming = 0.8608
+Accuracy = 0.6684
+----------------------------------------
+numHiddenUnits1 = 50; maxEpochs = 25;
+numHiddenUnits2 = 50;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+
+Absolute_false = 0.0295
+Coverage = 0.5945
+Absolute_true = 0.6199
+Aiming = 0.8521
+Accuracy = 0.6688
+----------------------------------------
+numHiddenUnits1 = 100; maxEpochs = 25;
+numHiddenUnits2 = 100;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+
+Absolute_false = 0.0291
+Coverage = 0.6091
+Absolute_true = 0.6456
+Aiming = 0.8662
+Accuracy = 0.6908
+----------------------------------------
+numHiddenUnits1 = 100; maxEpochs = 100;
+numHiddenUnits2 = 100;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+
+Absolute_false = 0.0234
+Coverage = 0.6238
+Absolute_true = 0.6534
+Aiming = 0.8072
+Accuracy = 0.7034
+----------------------------------------
+numHiddenUnits1 = 100; maxEpochs = 100;
+numHiddenUnits2 = 100;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+'Shuffle','every-epoch', ...
+
+Absolute_false = 0.0244
+Coverage = 0.6246
+Absolute_true = 0.6588
+Aiming = 0.8256
+Accuracy = 0.7068
+----------------------------------------
+numHiddenUnits1 = 100; maxEpochs = 50;
+numHiddenUnits2 = 100;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence','StateActivationFunction','softsign', 'GateActivationFunction','hard-sigmoid')
+reluLayer
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+'Shuffle','every-epoch', ...
+
+Absolute_false = 0.0277
+Coverage = 0.6122
+Absolute_true = 0.6539
+Aiming = 0.8543
+Accuracy = 0.6976
+----------------------------------------
+numHiddenUnits1 = 50; maxEpochs = 50;
+numHiddenUnits2 = 50;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence','StateActivationFunction','softsign', 'GateActivationFunction','hard-sigmoid')
+leakyReluLayer
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+'Shuffle','never', ...
+
+Absolute_false = 0.0272
+Coverage = 0.6103
+Absolute_true = 0.6464
+Aiming = 0.8500
+Accuracy = 0.6909
+----------------------------------------
+numHiddenUnits1 = 50; maxEpochs = 50;
+numHiddenUnits2 = 50;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+leakyReluLayer
+'Shuffle','never', ...
+
+Absolute_false = 0.0276
+Coverage = 0.6126
+Absolute_true = 0.6505
+Aiming = 0.8539
+Accuracy = 0.6962
+----------------------------------------
+numHiddenUnits1 = 25; maxEpochs = 50;
+numHiddenUnits2 = 50;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+
+Absolute_false = 0.0545
+Coverage = 0.3101
+Absolute_true = 0.3353
+Aiming = 0.7731
+Accuracy = 0.3573
+----------------------------------------
+numHiddenUnits1 = 25; maxEpochs = 50;
+numHiddenUnits2 = 50;
+lstmLayer(numHiddenUnits1,'OutputMode','sequence')
+lstmLayer(numHiddenUnits1,'OutputMode','sequence')
+lstmLayer(numHiddenUnits1,'OutputMode','sequence')
+lstmLayer(numHiddenUnits2,'OutputMode','last')
+
+Absolute_false = 0.0545
+Coverage = 0.3101
+Absolute_true = 0.3353
+Aiming = 0.7731
+Accuracy = 0.3573
+----------------------------------------
+numHiddenUnits1 = 25;
+numHiddenUnits2 = 50;
+lstmLayer(numHiddenUnits1,'OutputMode','sequence')
+lstmLayer(numHiddenUnits1,'OutputMode','sequence')
+lstmLayer(numHiddenUnits1,'OutputMode','sequence')
+lstmLayer(numHiddenUnits2,'OutputMode','last')
+options = trainingOptions('adam', ...
+    'GradientThreshold',1, ...
+    'InitialLearnRate',0.01, ...
+    'LearnRateSchedule','piecewise', ...
+    'LearnRateDropPeriod',20, ...
+    'Verbose',0, ...
+    'Plots','training-progress');
+
+Absolute_false = 0.0343
+Absolute_true = 0.5202
+Accuracy = 0.5580
+Aiming = 0.7693
+Coverage = 0.4862
+
+----------------------------------------
+numHiddenUnits1 = 25;
+numHiddenUnits2 = 50;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+options = trainingOptions('adam', ...
+    'GradientThreshold',1, ...
+    'InitialLearnRate',0.01, ...
+    'LearnRateSchedule','piecewise', ...
+    'LearnRateDropPeriod',20, ...
+    'Verbose',0, ...
+    'Plots','training-progress');
+
+Absolute_false = 0.0313
+Absolute_true = 0.5697
+Accuracy = 0.6148
+Aiming = 0.7957
+Coverage = 0.5360
+----------------------------------------
+numHiddenUnits1 = 25; maxEpochs = 50;
+numHiddenUnits2 = 50;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+options = trainingOptions('adam', ...
+    'GradientThreshold',1, ...
+    'InitialLearnRate',0.01, ...
+    'MaxEpochs',maxEpochs, ...
+    'LearnRateSchedule','piecewise', ...
+    'LearnRateDropPeriod',20, ...
+    'Verbose',0, ...
+    'Plots','training-progress');
+
+Absolute_false = 0.0303
+Absolute_true = 0.5859
+Accuracy = 0.6302
+Aiming = 0.8003
+Coverage = 0.5491
+----------------------------------------
+numHiddenUnits1 = 100; maxEpochs = 50;
+numHiddenUnits2 = 100;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+bilstmLayer(numHiddenUnits2,'OutputMode','last')
+options = trainingOptions('adam', ...
+    'GradientThreshold',1, ...
+    'InitialLearnRate',0.01, ...
+    'MaxEpochs',maxEpochs, ...
+    'LearnRateSchedule','piecewise', ...
+    'LearnRateDropPeriod',20, ...
+    'Verbose',0, ...
+    'Plots','training-progress');
+
+Absolute_false = 0.0268
+Absolute_true = 0.6446
+Accuracy = 0.6892
+Aiming = 0.8401
+Coverage = 0.6053
+----------------------------------------
+numHiddenUnits1 = 1000; maxEpochs = 50;
+bilstmLayer(numHiddenUnits1,'OutputMode','last')
+options = trainingOptions('adam', ...
+    'GradientThreshold',1, ...
+    'InitialLearnRate',0.01, ...
+    'MaxEpochs',maxEpochs, ...
+    'LearnRateSchedule','piecewise', ...
+    'LearnRateDropPeriod',20, ...
+    'Verbose',0, ...
+    'Plots','training-progress');
+
+Absolute_false = 0.0283
+Absolute_true = 0.6660
+Accuracy = 0.7060
+Aiming = 0.8764
+Coverage = 0.6219
+----------------------------------------
+numHiddenUnits1 = 500; maxEpochs = 50;
+numHiddenUnits2 = 500;
+bilstmLayer(numHiddenUnits1,'OutputMode','sequence')
+    bilstmLayer(numHiddenUnits2,'OutputMode','last')
+    'GradientThreshold',1, ...
+    'InitialLearnRate',0.01, ...
+    'MaxEpochs',maxEpochs, ...
+    'LearnRateSchedule','piecewise', ...
+    'LearnRateDropPeriod',20, ...
+    'Verbose',0, ...
+    'Plots','training-progress');
+
+Absolute_false = 0.0382
+Absolute_true = 0.5287
+Accuracy = 0.5685
+Aiming = 0.8398
+Coverage = 0.5004
+----------------------------------------
+|              RIFERIMENTO             |
+----------------------------------------
+numHiddenUnits = 100;
+numClasses = 14;
+
+layers = [ ...
+    sequenceInputLayer(inputSize)
+    bilstmLayer(numHiddenUnits,'OutputMode','last')
+    fullyConnectedLayer(numClasses)
+    softmaxLayer
+    classificationLayer];
+maxEpochs = 100;
+miniBatchSize = 15;
+
+options = trainingOptions('adam', ...
+    'ExecutionEnvironment','cpu', ...
+    'GradientThreshold',1, ...
+    'MaxEpochs',maxEpochs, ...
+    'MiniBatchSize',miniBatchSize, ...
+    'SequenceLength','longest', ...
+    'Shuffle','never', ...
+    'Verbose',0, ...
+    'Plots','training-progress');
+
+Absolute_false = 0.0263
+Absolute_true = 0.6652
+Accuracy = 0.7117
+Aiming = 0.8559
+Coverage = 0.6287
+----------------------------------------
+|            MIGLIORE MODIFICA         |
+----------------------------------------
+salvata come rete1
+
+numHiddenUnits = 100;
+numClasses = 14;
+
+layers = [ ...
+    sequenceInputLayer(inputSize)
+    bilstmLayer(numHiddenUnits,'OutputMode','sequence')
+    bilstmLayer(numHiddenUnits,'OutputMode','last')
+    leakyReluLayer
+    fullyConnectedLayer(numClasses)
+    softmaxLayer
+    classificationLayer];
+maxEpochs = 100;
+miniBatchSize = 15;
+
+options = trainingOptions('adam', ...
+    'ExecutionEnvironment','cpu', ...
+    'GradientThreshold',1, ...
+    'MaxEpochs',maxEpochs, ...
+    'MiniBatchSize',miniBatchSize, ...
+    'SequenceLength','longest', ...
+    'Shuffle','never', ...
+    'Verbose',0, ...
+    'Plots','training-progress');
+
+Absolute_false = 0.0227
+Absolute_true = 0.6590
+Accuracy = 0.7084
+Aiming = 0.8101
+Coverage = 0.6270
+----------------------------------------
+|           MIGLIORE MODIFICA (2)      |
+----------------------------------------
+salvata come rete2, allenamento MOLTO più veloce
+
+numHiddenUnits = 100;
+numClasses = 14;
+
+layers = [ ...
+    sequenceInputLayer(inputSize)
+    bilstmLayer(numHiddenUnits,'OutputMode','sequence')
+    bilstmLayer(numHiddenUnits,'OutputMode','last')
+    reluLayer
+    dropoutLayer
+    fullyConnectedLayer(numClasses)
+    softmaxLayer
+    classificationLayer];
+maxEpochs = 50;
+miniBatchSize = 15;
+
+options = trainingOptions('adam', ...
+    'ExecutionEnvironment','cpu', ...
+    'GradientThreshold',1, ...
+    'MaxEpochs',maxEpochs, ...
+    'MiniBatchSize',miniBatchSize, ...
+    'SequenceLength','longest', ...
+    'Shuffle','never', ...
+    'Verbose',0, ...
+    'Plots','training-progress');
+
+Absolute_false = 0.0273
+Absolute_true = 0.6546
+Accuracy = 0.7010
+Aiming = 0.8632
+Coverage = 0.6217

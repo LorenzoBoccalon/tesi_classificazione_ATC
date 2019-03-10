@@ -1,0 +1,15 @@
+%perfomance con classificatore multilabel logistic con L2 regularization
+
+classMatLearn (senza LSTM)
+Absolute_false = 0.0347
+Absolute_true = 0.5874
+Accuracy = 0.6620
+Aiming = 0.8096
+Coverage = 0.6924
+
+classLSTMatLearn (con LSTM)
+Absolute_false = 0.0236
+Absolute_true = 0.6742
+Accuracy = 0.7316
+Aiming = 0.8301
+Coverage = 0.6883
